@@ -1,0 +1,12 @@
+{
+  "src": [
+    "pages/MainPage",
+    "pages/Index",
+    "pages/UIContainerPage",
+    "pages/RouterNavigationPage/NavigationPage",
+    "pages/RouterNavigationPage/RouterNavigationContainerPage",
+    "pages/RouterNavigationPage/TabsPage",
+    "pages/CommonWidget/CommonContainerWidgetPage",
+    "pages/CommonWidget/ButtonPage"
+  ]
+}
