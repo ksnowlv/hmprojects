@@ -7,6 +7,8 @@
     "pages/RouterNavigationPage/RouterNavigationContainerPage",
     "pages/RouterNavigationPage/TabsPage",
     "pages/CommonWidget/CommonContainerWidgetPage",
-    "pages/CommonWidget/ButtonPage"
+    "pages/CommonWidget/ButtonPage",
+    "pages/Layout/LayoutContainerPage",
+    "pages/Layout/RowColumnPage"
   ]
 }

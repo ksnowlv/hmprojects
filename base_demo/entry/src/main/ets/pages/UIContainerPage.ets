@@ -138,7 +138,7 @@ struct UIContainerPage {
 
 		switch (item) {
 			case "UI布局":
-				url = 'pages/UIContainerPage'
+				url = 'pages/Layout/LayoutContainerPage'
 				break
 
 			case "组件-常用组件":
