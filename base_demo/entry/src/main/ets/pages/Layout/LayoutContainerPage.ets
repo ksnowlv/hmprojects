@@ -110,34 +110,34 @@ struct LayoutContainerPage {
 				break
 
 			case LayoutContainerPageType.LayoutContainerPageTypeStack:
-				url = 'pages/RouterNavigationPage/NavigationPage'
+				url = 'pages/Layout/StackPage'
 				break;
 
 			case LayoutContainerPageType.LayoutContainerPageTypeFlex:
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/Layout/FlexPage'
 				break
 			case LayoutContainerPageType.LayoutContainerPageTypeRelativeContainer:
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/Layout/RelativeContainerPage'
 				break
 
 			case LayoutContainerPageType.LayoutContainerPageTypeGridRow:
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/Layout/GridRowColPage'
 				break
 
 			case LayoutContainerPageType.LayoutContainerPageTypeMediaquery:
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/Layout/MediaQueryPage'
 				break
 
 			case LayoutContainerPageType.LayoutContainerPageTypeList:
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/Layout/ListPage'
 				break
 
 			case LayoutContainerPageType.LayoutContainerPageTypeGrid:
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/Layout/GridPage'
 				break
 
 			case LayoutContainerPageType.LayoutContainerPageTypeSwiper:
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/Layout/SwiperPage'
 				break
 
 			default:

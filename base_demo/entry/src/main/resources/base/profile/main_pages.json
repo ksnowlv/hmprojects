@@ -3,12 +3,23 @@
     "pages/MainPage",
     "pages/Index",
     "pages/UIContainerPage",
+    "pages/PullToRefreshPage",
     "pages/RouterNavigationPage/NavigationPage",
     "pages/RouterNavigationPage/RouterNavigationContainerPage",
     "pages/RouterNavigationPage/TabsPage",
     "pages/CommonWidget/CommonContainerWidgetPage",
     "pages/CommonWidget/ButtonPage",
     "pages/Layout/LayoutContainerPage",
-    "pages/Layout/RowColumnPage"
+    "pages/Layout/RowColumnPage",
+    "pages/Layout/FlexPage",
+    "pages/Layout/GridPage",
+    "pages/Layout/GridRowColPage",
+    "pages/Layout/ListPage",
+    "pages/Layout/MediaQueryPage",
+    "pages/Layout/RelativeContainerPage",
+    "pages/Layout/StackPage",
+    "pages/Layout/SwiperPage",
+    "pages/Layout/CityListPage",
+    "pages/Layout/ContactsListPage"
   ]
 }

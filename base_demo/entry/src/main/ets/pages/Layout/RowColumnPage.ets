@@ -20,7 +20,7 @@ struct RowColumnPagePage {
 
 	@Builder navigationTitle() {
 		Column() {
-			Text('常用组件')
+			Text('线性布局')
 				.fontColor('#182431')
 				.fontSize(30)
 				.lineHeight(41)
@@ -50,7 +50,7 @@ struct RowColumnPagePage {
 				Row({ space: 10 }) {
 					Text('Column容器内水平方向排列 space: 10')
 						.fontSize(20)
-						.fontColor(Color.Gray)
+						.fontColor(Color.White)
 						.width('40%')
 					Row().width('10%').height(50).backgroundColor(Color.Red)
 					Row().width('10%').height(50).backgroundColor(Color.Green)
@@ -95,7 +95,7 @@ struct RowColumnPagePage {
 			ListItem() {
 				Column({}) {
 					Text('HorizontalAlign.End：子元素在水平方向右对齐')
-						.fontSize(20)
+						.fontSize(20).fontColor(Color.White)
 					Column() {
 					}.width('80%').height(30).backgroundColor(Color.Red)
 
@@ -127,7 +127,7 @@ struct RowColumnPagePage {
 			ListItem() {
 				Row({}) {
 					Text('VerticalAlign.Center：子元素在垂直方向居中对齐')
-						.fontSize(20).width('30%')
+						.fontSize(20).width('30%').fontColor(Color.White)
 					Column() {
 					}.width('20%').height(50).backgroundColor(Color.Red)
 
@@ -159,7 +159,7 @@ struct RowColumnPagePage {
 
 				Column({}) {
 					Text('justifyContent(FlexAlign.Start)：元素在垂直方向方向首端对齐，第一个元素与行首对齐，同时后续的元素与前一个对齐')
-						.fontSize(20)
+						.fontSize(20).fontColor(Color.White)
 					Column() {
 					}.width('80%').height(40).backgroundColor(Color.Red)
 
@@ -210,7 +210,7 @@ struct RowColumnPagePage {
 
 				Column({}) {
 					Text('justifyContent(FlexAlign.SpaceBetween)：垂直方向均匀分配元素，相邻元素之间距离相同。第一个元素与行首对齐，最后一个元素与行尾对齐')
-						.fontSize(20)
+						.fontSize(20).fontColor(Color.White)
 					Column() {
 					}.width('80%').height(40).backgroundColor(Color.Red)
 
@@ -244,7 +244,7 @@ struct RowColumnPagePage {
 
 				Column({}) {
 					Text('justifyContent(FlexAlign.SpaceEvenly)：垂直方向均匀分配元素，相邻元素之间的距离、第一个元素与行首的间距、最后一个元素到行尾的间距都完全一样')
-						.fontSize(20)
+						.fontSize(20).fontColor(Color.White)
 					Column() {
 					}.width('80%').height(40).backgroundColor(Color.Red)
 

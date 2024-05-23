@@ -30,7 +30,8 @@ struct UIContainerPage {
 		"下拉刷新组件",
 	]
 
-	@Builder navigationTitle() {
+	@Builder
+	navigationTitle() {
 		Column() {
 			Text('UI开发')
 				.fontColor('#182431')
@@ -49,6 +50,7 @@ struct UIContainerPage {
 	onPageShow() {
 		console.info(`${this.TAG} onPageShow`);
 	}
+
 	// 只有被@Entry装饰的组件才可以调用页面的生命周期
 	onPageHide() {
 		console.info(`${this.TAG} onPageHide`);
@@ -65,7 +67,6 @@ struct UIContainerPage {
 		console.info(`${this.TAG} aboutToAppear`);
 		this.setupData()
 	}
-
 
 	// 组件生命周期
 	aboutToDisappear() {
@@ -90,7 +91,8 @@ struct UIContainerPage {
 
 	}
 
-	@Builder buildList() {
+	@Builder
+	buildList() {
 
 		if (this.itemList.length == 0) {
 			Text("list have no data").fontSize(20).width('100%')
@@ -165,7 +167,7 @@ struct UIContainerPage {
 				break
 
 			case "下拉刷新组件":
-				url = "pages/NavigationExample"
+				url = "pages/PullToRefreshPage"
 				break
 
 			default:
