@@ -140,34 +140,35 @@ struct UIContainerPage {
 
 		switch (item) {
 			case "UI布局":
-				url = 'pages/Layout/LayoutContainerPage'
+				url = 'pages/UI/LayoutContainerPage'
 				break
 
 			case "组件-常用组件":
-				url = 'pages/CommonWidget/CommonContainerWidgetPage'
-				break;
+				url = 'pages/UI/CommonContainerWidgetPage'
+				break
 
 			case "组件-气泡和菜单":
+				url = 'pages/UI/PopupMenuPage'
 				break
 
 			case "页面路由和组件导航":
-				url = "pages/RouterNavigationPage/RouterNavigationContainerPage"
+				url = "pages/UI/RouterNavigationContainerPage"
 				break
 
 			case "显示图形":
-				url = "pages/NavigationExample"
+				url = 'pages/UI/ShapePage'
 				break
 
 			case "使用动画":
-				url = "pages/NavigationExample"
+				url = 'pages/UI/AnimationPage'
 				break
 
 			case "使用交互事件":
-				url = "pages/NavigationExample"
+				url = 'pages/UI/EventPage'
 				break
 
 			case "下拉刷新组件":
-				url = "pages/PullToRefreshPage"
+				url = "pages/UI/PullToRefreshPage"
 				break
 
 			default:
