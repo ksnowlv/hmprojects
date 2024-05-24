@@ -13,6 +13,8 @@
     "pages/UI/CommonContainerWidgetPage",
     "pages/RouterNavigationPage/NavigationPage",
     "pages/RouterNavigationPage/TabsPage",
+    "pages/RouterNavigationPage/RouterDetailPage",
+    "pages/RouterNavigationPage/RouterPage",
     "pages/CommonWidget/ButtonPage",
     "pages/CommonWidget/CustomDialogPage",
     "pages/CommonWidget/ProgressPage",

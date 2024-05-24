@@ -8,9 +8,10 @@ struct RouterNavigationContainerPage {
 		"组件导航Tabs",
 	]
 
-	@Builder navigationTitle() {
+	@Builder
+	navigationTitle() {
 		Column() {
-			Text('鸿蒙课程')
+			Text('页面路由及组件导航')
 				.fontColor('#182431')
 				.fontSize(30)
 				.lineHeight(41)
@@ -18,7 +19,8 @@ struct RouterNavigationContainerPage {
 		}.alignItems(HorizontalAlign.Start)
 	}
 
-	@Builder buildList() {
+	@Builder
+	buildList() {
 		if (this.itemList.length == 0) {
 			Text("list have no data").fontSize(20).width('100%')
 		} else {
@@ -29,7 +31,7 @@ struct RouterNavigationContainerPage {
 							.borderRadius(10)
 							.backgroundColor(0xff31abff)
 							.width('70%')
-							.height(30)
+							.height(40)
 							.align(Alignment.Center)
 							.onClick(() => {
 								console.info(`您进入${value}部分学习`);
@@ -38,7 +40,7 @@ struct RouterNavigationContainerPage {
 							})
 					}
 					.width('100%')
-					.height(40)
+					.height(50)
 				})
 			}
 			.alignListItem(ListItemAlign.Start)
@@ -61,7 +63,7 @@ struct RouterNavigationContainerPage {
 
 		switch (item) {
 			case "页面路由":
-				url = 'pages/UIContainerPage'
+				url = 'pages/RouterNavigationPage/RouterPage'
 				break
 
 			case "组件导航Navigation":
