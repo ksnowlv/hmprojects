@@ -15,7 +15,8 @@ struct CommonContainerWidgetPage {
 		"XComponent",
 	]
 
-	@Builder navigationTitle() {
+	@Builder
+	navigationTitle() {
 		Column() {
 			Text('常用组件')
 				.fontColor('#182431')
@@ -25,7 +26,8 @@ struct CommonContainerWidgetPage {
 		}.alignItems(HorizontalAlign.Start)
 	}
 
-	@Builder buildList() {
+	@Builder
+	buildList() {
 		if (this.itemList.length == 0) {
 			Text("list have no data").fontSize(20).width('100%')
 		} else {
@@ -71,34 +73,34 @@ struct CommonContainerWidgetPage {
 				break
 
 			case "单选框":
-				url = 'pages/RouterNavigationPage/NavigationPage'
+				url = 'pages/CommonWidget/RadioPage'
 				break;
 
 			case "切换按钮":
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/CommonWidget/TogglePage'
 				break
 			case "进度条":
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/CommonWidget/ProgressPage'
 				break
 
 			case "文本显示":
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/CommonWidget/TextSpanPage'
 				break
 
 			case "文本输入":
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/CommonWidget/TextInputTextAreaPage'
 				break
 
 			case "自定义弹框":
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/CommonWidget/CustomDialogPage'
 				break
 
 			case "视频播放":
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/CommonWidget/VideoPage'
 				break
 
 			case "XComponent":
-				url = 'pages/RouterNavigationPage/TabsPage'
+				url = 'pages/CommonWidget/XComponentPage'
 				break
 
 			default:
