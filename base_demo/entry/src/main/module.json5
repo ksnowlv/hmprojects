@@ -32,6 +32,28 @@
           }
         ]
       }
+    ],
+
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+        "usedScene": {
+          "when": "always"
+        },
+
+      },
+      {
+        "name": "ohos.permission.MODIFY_AUDIO_SETTINGS",
+        "usedScene": {
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.READ_MEDIA",
+        "usedScene": {
+          "when": "always"
+        }
+      }
     ]
   }
 }
