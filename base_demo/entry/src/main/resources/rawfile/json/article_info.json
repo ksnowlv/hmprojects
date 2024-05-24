@@ -1,0 +1,34 @@
+{
+    "article": {
+      "id": 1234,
+      "title": "Flutter JSON数据处理示例",
+      "content": "在Flutter中处理JSON数据的详细示例",
+      "author": {
+        "id": 1234,
+        "name": "ksnow"
+      },
+      "tags": [
+        "Flutter",
+        "JSON",
+        "Dart"
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "text": "非常详细，谢谢分享！",
+          "author": {
+            "id": 1235,
+            "name": "lucy"
+          }
+        },
+        {
+          "id": 2,
+          "text": "JSON数据处理，非常好用",
+          "author": {
+            "id": 1236,
+            "name": "jack"
+          }
+        }
+      ]
+    }
+  }

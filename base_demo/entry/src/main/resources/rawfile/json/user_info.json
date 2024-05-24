@@ -1,0 +1,24 @@
+{
+    "userInfo":{
+      "name":"lili",
+      "age":30,
+      "address":"北京市",
+      "account":"ksnowlv"
+    },
+    "subscriptions":[
+      {
+        "title":"Flutter入门指南",
+        "subtitle":"从零开始学习Flutter",
+        "content":"Flutter是一种用于创建跨平台移动应用程序的开源UI工具包。",
+        "subscriptionId":"sub001",
+        "likes":100
+      },
+      {
+        "title":"Dart编程语言介绍",
+        "subtitle":"学习Dart的基本语法和特性",
+        "content":"Dart是一种由Google开发的面向对象、类似Java和JavaScript的新型编程语言。",
+        "subscriptionId":"sub002",
+        "likes":85
+      }
+    ]
+   }
