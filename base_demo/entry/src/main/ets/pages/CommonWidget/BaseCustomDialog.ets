@@ -1,12 +1,9 @@
-import { DEFAULT } from '@ohos/hypium'
-
 @CustomDialog
 export default struct BaseCustomDialog {
 	message: string = ''
 	cancel?: () => void
 	confirm?: () => void
 	controller: CustomDialogController
-
 
 	build() {
 		Column() {

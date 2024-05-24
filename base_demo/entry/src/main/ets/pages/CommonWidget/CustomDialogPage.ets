@@ -17,19 +17,21 @@ struct CustomDialogPage {
 	}
 
 	@Builder
-	buildButtons() {
+	buildPage() {
 
 		Button({ type: ButtonType.Normal, stateEffect: true }) {
 			Row() {
-				Image($r('app.media.icon')).width(20).height(40).margin({ left: 12 })
-				Text('loading').fontSize(12).fontColor(0xffffff).margin({ left: 5, right: 12 })
-			}.alignItems(VerticalAlign.Center)
+				Image($r('app.media.icon')).width(40).height(40).margin({ left: 10, right: 10 })
+				Text('显示自定义对话框').fontSize(28).fontColor(0xffffff)
+			}
+			.alignItems(VerticalAlign.Center)
+
 		}
-		.margin({ bottom: 10 })
+		.margin({ top: 10, bottom: 10 })
 		.borderRadius(8)
 		.backgroundColor(0x317aff)
-		.width(100)
-		.height(50)
+		.width('80%')
+		.height(60)
 		.onClick(() => {
 			this.showDialog()
 		})
@@ -65,7 +67,7 @@ struct CustomDialogPage {
 	build() {
 		Column() {
 			Navigation() {
-				this.buildButtons()
+				this.buildPage()
 			}.title(this.navigationTitle())
 			.titleMode(NavigationTitleMode.Full)
 
