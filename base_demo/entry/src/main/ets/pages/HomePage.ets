@@ -30,19 +30,20 @@ export default struct HomePage {
 
 	}
 
-	@Builder navigationTitle() {
+	@Builder
+	navigationTitle() {
 		Column() {
-			Text('鸿蒙课程')
+			Text('鸿蒙学习计划')
 				.fontColor('#182431')
 				.fontSize(30)
 				.lineHeight(41)
 				.fontWeight(700)
-			Text('鸿蒙课程')
+			Text('按主题进行')
 				.fontColor('#182431')
 				.fontSize(14)
 				.lineHeight(19)
 				.opacity(0.4)
-				.margin({ top: 2, bottom: 20 })
+				.margin({ top: 2, bottom: 10 })
 		}.alignItems(HorizontalAlign.Start)
 	}
 
@@ -57,7 +58,8 @@ export default struct HomePage {
 
 	}
 
-	@Builder buildList() {
+	@Builder
+	buildList() {
 		List() {
 			ForEach(this.itemList, (item: string) => {
 				ListItem() {
@@ -88,7 +90,38 @@ export default struct HomePage {
 				break;
 
 			case "ARKTS语言基础类库":
-				url = "pages/NavigationExample"
+				url = "pages/BaseARKTSPage"
+				break
+			case "通知":
+				url = "pages/NotificationPage"
+				break
+			case "媒体":
+				url = "pages/MediaPage"
+				break
+			case "安全":
+				url = "pages/BaseARKTSPage"
+				break
+			case "网络与连接":
+				url = "pages/NetPage"
+				break
+			case "电话服务":
+				url = "pages/PhoneServicePage"
+				break
+			case "数据管理":
+				url = "pages/DataMgrPage"
+				break
+			case "文件管理":
+				url = "pages/FileMgrPage"
+				break
+			case "后台任务":
+				url = "pages/BackgroundTaskPage"
+				break
+			case "设备管理":
+				url = "pages/DeviceMgrPage"
+				break
+
+			case "DFX":
+				url = "pages/DFXPage"
 				break
 
 			default:

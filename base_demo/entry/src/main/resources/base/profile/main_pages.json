@@ -1,7 +1,17 @@
 {
   "src": [
+    "pages/AdsPage",
+    "pages/BackgroundTaskPage",
+    "pages/BaseARKTSPage",
+    "pages/DataMgrPage",
+    "pages/DeviceMgrPage",
+    "pages/DFXPage",
+    "pages/FileMgrPage",
     "pages/MainPage",
-    "pages/Index",
+    "pages/MediaPage",
+    "pages/NetPage",
+    "pages/NotificationPage",
+    "pages/PhoneServicePage",
     "pages/UIContainerPage",
     "pages/UI/AnimationPage",
     "pages/UI/EventPage",
