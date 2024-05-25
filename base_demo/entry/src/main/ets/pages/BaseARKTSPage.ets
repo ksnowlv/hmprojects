@@ -1,3 +1,5 @@
+import router from '@ohos.router'
+
 @Entry
 @Component
 struct BaseARKTSPage {
@@ -18,7 +20,25 @@ struct BaseARKTSPage {
 
 			ListItem() {
 
-				Column({ space: 10 }) {
+				Column({ space: 30 }) {
+
+					Button('并发编程')
+						.width('80%')
+						.onClick(() => {
+							router.pushUrl({ url: 'pages/BaseArkTS/ConcurrencyPage' })
+						})
+
+					Button('类似STL的容器类库')
+						.width('80%')
+						.onClick(() => {
+							router.pushUrl({ url: 'pages/BaseArkTS/STLPage' })
+						})
+
+					Button('XML的生成，解析，转换')
+						.width('80%')
+						.onClick(() => {
+							router.pushUrl({ url: 'pages/BaseArkTS/XMLPage' })
+						})
 
 
 				}.width('100%')

@@ -45,6 +45,9 @@
     "pages/Layout/StackPage",
     "pages/Layout/SwiperPage",
     "pages/Layout/CityListPage",
-    "pages/Layout/ContactsListPage"
+    "pages/Layout/ContactsListPage",
+    "pages/BaseArkTS/ConcurrencyPage",
+    "pages/BaseArkTS/STLPage",
+    "pages/BaseArkTS/XMLPage"
   ]
 }
