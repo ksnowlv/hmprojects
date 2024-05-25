@@ -12,11 +12,11 @@ export class MyTask {
 	static async handleReadFile(): Promise<string> {
 		// 创建 Task 对象时，传递一个函数引用，而不是 this.readFile
 
-		let task = new taskpool.Task(readFile, 2);
+		let task = new taskpool.Task(readFile, 2,);
 
 		try {
 			// 等待 taskpool.execute(task) 解析并获取结果
-			let res = await taskpool.execute(task) as string;
+			let res = await taskpool.execute(task, taskpool.Priority.HIGH) as string;
 			console.info(`MyTask handleReadFile ${res}`)
 			return res
 		} catch (error) {

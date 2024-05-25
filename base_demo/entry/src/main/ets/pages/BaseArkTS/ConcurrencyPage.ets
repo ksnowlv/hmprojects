@@ -1,16 +1,22 @@
 import fs from '@ohos.file.fs';
 import common from '@ohos.app.ability.common';
 import { MyTask } from '../../model/MyTask'
+import worker from '@ohos.worker';
 
 
 @Entry
 @Component
 struct ConcurrencyPage {
+	TAG = 'ConcurrencyPage'
 	@State state: number = 0
 	@State userResult: string = ''
 	@State userContent: string = ''
 	@State num: number = 0
 	@State taskRes: string = ''
+	myWorker: worker.ThreadWorker = new worker.ThreadWorker("entry/ets/workers/MyWorker.ts");
+	jsWorkerInPutArr: string[] = [];
+	@State jsWorkerOutPutStr: string = ''
+	@State jsWorkerInPutStr: string = 'I am,go home,go,thank you,help me,wellcome,get out,I need your help,bye bye,good night'
 
 	@Builder
 	navigationTitle() {
@@ -100,9 +106,13 @@ struct ConcurrencyPage {
 
 						})
 
-					Text('当任务不需要长时间（3分钟）占据后台线程，而是一个个独立的任务时，推荐使用TaskPool，反之推荐使用Worker。接下来将以图像直方图处理以及后台长时间的模型预测任务')
+					Text('当任务不需要长时间（3分钟）占据后台线程，而是一个个独立的任务时，推荐使用TaskPool，反之推荐使用Worker。')
+						.width('80%')
 
 					Text(`MyTask.handleReadFile:${this.taskRes}`)
+						.width('80%')
+						.fontColor(Color.Green)
+					
 					Button('TaskPool-CPU密集型任务')
 						.width('80%')
 						.onClick(async () => {
@@ -112,6 +122,23 @@ struct ConcurrencyPage {
 							} else {
 								this.taskRes = 'error'
 							}
+						})
+
+					Text('Worker主要作用是为应用程序提供一个多线程的运行环境，可满足应用程序在执行过程中与主线程分离，在后台线程中运行一个脚本操作耗时操作，极大避免类似于计算密集型或高延迟的任务阻塞主线程的运行')
+						.width('80%')
+					Text('Worker创建后需要手动管理生命周期，且最多同时运行的Worker子线程数量为8个，详情请参见生命周期注意事项。\nAbility类型的Module支持使用Worker，Library类型的Module不支持使用Worker。\n创建Worker不支持使用其他Module的Worker.ts文件，即不支持跨模块调用Worker。\n由于不同线程中上下文对象是不同的，因此Worker线程只能使用线程安全的库，例如UI相关的非线程安全库不能使用。\n序列化传输的数据量大小限制为16MB。\n使用Worker模块时，需要在主线程中注册onerror接口，否则当worker线程出现异常时会发生jscrash问题。')
+						.width('80%')
+
+					Text(this.jsWorkerInPutStr)
+						.width('80%').fontColor(Color.Green)
+
+					Text(`Worker 字符串排序后:${this.jsWorkerOutPutStr}`)
+					Button('Worker分割字符串')
+						.width('80%')
+						.onClick(() => {
+							this.jsWorkerInPutArr = this.jsWorkerInPutStr.trim().split(',');
+							this.jsWorkerOutPutStr = '';
+							this.executeWorkerFunc(this.jsWorkerInPutArr);
 						})
 
 
@@ -205,6 +232,41 @@ struct ConcurrencyPage {
 				fs.close(file);
 			}
 		})
+	}
+
+	async executeWorkerFunc(inPutArr: string[]): Promise<void> {
+		if (!this.jsWorkerInPutStr.length) {
+			this.jsWorkerOutPutStr = "No input for the string to be sorted.\n";
+			return;
+		}
+
+		for (let index = 0; index < inPutArr.length; index++) {
+			console.log(`${this.TAG}, jsWorkerInPutStr:${inPutArr[index]}`)
+
+		}
+
+		this.myWorker.postMessage(inPutArr);
+		let strFlag = false;
+		let outPutStr = '';
+		this.myWorker.onmessage = (e) => {
+			outPutStr = e.data.toString();
+			console.log(`${this.TAG}, onmessage outPutStr:${outPutStr}`)
+			strFlag = true;
+		}
+		while (!strFlag) {
+			await this.promiseCase();
+		}
+		this.jsWorkerOutPutStr = outPutStr;
+	}
+
+	async promiseCase(): Promise<Object | void> {
+		let p: Promise<Object | void> = new Promise<Object>((resolve: Function, reject: Function) => {
+			setTimeout(() => {
+				resolve(1)
+			}, 100)
+		}).then(undefined, () => {
+		})
+		return p;
 	}
 
 	build() {
