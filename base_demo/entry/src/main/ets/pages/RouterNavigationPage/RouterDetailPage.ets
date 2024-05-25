@@ -21,7 +21,7 @@ struct RouterDetailPage {
 	@Builder
 	buildPage() {
 
-		Column({ space: 10 }) {
+		Column({ space: 20 }) {
 
 			if (this.dataModel == null) {
 				Text('没有获取传递过来的数据')
@@ -47,7 +47,9 @@ struct RouterDetailPage {
 					}
 				})
 
-		}.width('100%')
+		}
+		.width('100%')
+		.margin({ top: 20 })
 		.alignItems(HorizontalAlign.Center)
 		.justifyContent(FlexAlign.Center)
 

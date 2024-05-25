@@ -20,7 +20,7 @@ struct RouterPage {
 	@Builder
 	buildPage() {
 
-		Column({ space: 10 }) {
+		Column({ space: 20 }) {
 
 			Button('普通导航router.pushUrl').onClick(() => {
 				const url = this.routerDetailUrl
@@ -103,9 +103,11 @@ struct RouterPage {
 			}).width('80%')
 
 
-		}.width('100%')
+		}
+		.width('100%')
 		.alignItems(HorizontalAlign.Center)
 		.justifyContent(FlexAlign.Center)
+		.margin({ top: 30 })
 
 	}
 
