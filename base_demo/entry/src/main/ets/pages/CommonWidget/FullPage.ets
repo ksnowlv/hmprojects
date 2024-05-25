@@ -18,7 +18,7 @@ import mediaQuery from '@ohos.mediaquery';
 
 @Entry
 @Component
-export struct FullPage {
+struct FullPage {
 	@State fullParams: object = {}
 	@State fullSrc: Resource = $rawfile('test.mp4')
 	@State isHidden: boolean = false
