@@ -1,4 +1,5 @@
 {
+
   "module": {
     "name": "entry",
     "type": "entry",
@@ -37,6 +38,7 @@
     "requestPermissions": [
       {
         "name": "ohos.permission.INTERNET",
+//        "reason": "允许程序打开网络套接字，进行网络连接",
         "usedScene": {
           "when": "always"
         },
@@ -53,7 +55,30 @@
         "usedScene": {
           "when": "always"
         }
+      },
+      {
+        "name" : "ohos.permission.GET_NETWORK_INFO",
+//        "reason": "获取网络连接信息",
+        "usedScene": {
+          "abilities": [
+            "FormAbility"
+          ],
+          "when":"always"
+        }
+      },
+      {
+        "name" : "ohos.permission.SET_NETWORK_INFO",
+//        "reason": "修改网络连接状态",
+        "usedScene": {
+          "abilities": [
+            "FormAbility"
+          ],
+          "when":"always"
+        }
       }
+
     ]
+
   }
+
 }
