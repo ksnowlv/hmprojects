@@ -28,6 +28,7 @@ struct UIContainerPage {
 		"使用动画",
 		"使用交互事件",
 		"下拉刷新组件",
+		"登陆页面",
 	]
 
 	@Builder
@@ -170,6 +171,10 @@ struct UIContainerPage {
 			case "下拉刷新组件":
 				url = "pages/UI/PullToRefreshPage"
 				break
+			case "登陆页面":
+				url = "pages/UI/LoginPage"
+				break
+
 
 			default:
 				console.error(`No page found for item: ${item}`)

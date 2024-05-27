@@ -48,6 +48,7 @@
     "pages/Layout/ContactsListPage",
     "pages/BaseArkTS/ConcurrencyPage",
     "pages/BaseArkTS/STLPage",
-    "pages/BaseArkTS/XMLPage"
+    "pages/BaseArkTS/XMLPage",
+    "pages/UI/LoginPage"
   ]
 }
