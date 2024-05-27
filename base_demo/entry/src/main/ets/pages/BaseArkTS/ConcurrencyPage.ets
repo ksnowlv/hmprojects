@@ -13,6 +13,7 @@ struct ConcurrencyPage {
 	@State userContent: string = ''
 	@State num: number = 0
 	@State taskRes: string = ''
+	//注意ThreadWorker的路径
 	myWorker: worker.ThreadWorker = new worker.ThreadWorker("entry/ets/workers/MyWorker.ts");
 	jsWorkerInPutArr: string[] = [];
 	@State jsWorkerOutPutStr: string = ''
@@ -112,7 +113,7 @@ struct ConcurrencyPage {
 					Text(`MyTask.handleReadFile:${this.taskRes}`)
 						.width('80%')
 						.fontColor(Color.Green)
-					
+
 					Button('TaskPool-CPU密集型任务')
 						.width('80%')
 						.onClick(async () => {
@@ -133,6 +134,8 @@ struct ConcurrencyPage {
 						.width('80%').fontColor(Color.Green)
 
 					Text(`Worker 字符串排序后:${this.jsWorkerOutPutStr}`)
+						.width('80%')
+
 					Button('Worker分割字符串')
 						.width('80%')
 						.onClick(() => {
